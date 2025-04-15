@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geração Eleita</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Chamada do CSS externo -->
 </head>
 <body>
     <header>
@@ -108,28 +108,8 @@
         <p>&copy; 2024 Geração Eleita. Todos os direitos reservados.</p>
     </footer>
 
-    <script type="module" src="js/main.js"></script>
-    <script>
-        const aniversariantes = [
-            { nome: "João Silva", dataAniversario: "2025-04-16", foto: "assets/foto_joao.jpg" },
-            { nome: "Maria Santos", dataAniversario: "2025-04-17", foto: "assets/foto_maria.jpg" }
-        ];
-
-        function exibirAniversariante() {
-            const hoje = new Date().toISOString().split("T")[0];
-            const aniversariante = aniversariantes.find(pessoa => pessoa.dataAniversario === hoje);
-
-            if (aniversariante) {
-                const container = document.getElementById("aniversarianteDoDia");
-                container.innerHTML = `
-                    <h3>🎉 Feliz Aniversário! 🎉</h3>
-                    <img src="${aniversariante.foto}" alt="Foto de ${aniversariante.nome}" width="200">
-                    <p>${aniversariante.nome}</p>
-                `;
-            }
-        }
-
-        window.onload = exibirAniversariante;
-    </script>
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script> <!-- Chamada para o JS atualizado -->
 </body>
 </html>
+
